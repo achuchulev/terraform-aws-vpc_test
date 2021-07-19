@@ -22,17 +22,17 @@ provider "aws" {
 resource "aws_vpc" "example" {
   cidr_block = "10.0.0.0/16"
 
-  tags = {
-    Owner = "example"
-    VPC_Name = "Atanas Test"
-    Soucre   = "Resource Tag"
-  }
+//  tags = {
+//    Owner = "example"
+//    VPC_Name = "Atanas Test"
+//    Soucre   = "Resource Tag"
+//  }
 }
 
 output "vpc_resource_level_tags" {
   value = aws_vpc.example.tags
 }
 
-// output "vpc_all_tags" {
-//   value = aws_vpc.example.tags_all
-// }
+output "vpc_all_tags" {
+  value = aws_vpc.example.tags_all
+}
