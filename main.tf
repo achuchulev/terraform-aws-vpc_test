@@ -13,8 +13,8 @@ provider "aws" {
 
    default_tags {
      tags = {
-       Environment = "Test. \"
-       Name        = "Provider Tag /n"
+       Environment = "Test. \n"
+       Name        = "Provider / Tag "
      }
    }
 }
