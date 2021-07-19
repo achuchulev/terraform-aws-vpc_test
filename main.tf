@@ -24,8 +24,9 @@ resource "aws_vpc" "example" {
 
   tags = {
     Owner = "example"
-    Environment = "Test"
-    Name        = "Provider Tag"
+    Env = "Test"
+    Ver = "0.0.1"
+    VPC_Name = "Atanas Test"
   }
 }
 
