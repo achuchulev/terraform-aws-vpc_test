@@ -11,28 +11,28 @@ terraform {
 provider "aws" {
   region = "us-east-1"
 
-//   default_tags {
-//     tags = {
-//       Environment = "Test"
-//       Name        = "Provider Tag"
-//     }
-//   }
+   default_tags {
+     tags = {
+       Environment = "Test. \n"
+       Name        = "Provider / Tag "
+     }
+   }
 }
 
 resource "aws_vpc" "example" {
   cidr_block = "10.0.0.0/16"
 
-  tags = {
-    Owner = "example"
-    Environment = "Test"
-    Name        = "Provider Tag"
-  }
+//  tags = {
+//    Owner = "example"
+//    VPC_Name = "Atanas Test"
+//    Soucre   = "Resource Tag"
+//  }
 }
 
-// output "vpc_resource_level_tags" {
-//   value = aws_vpc.example.tags
-// }
+output "vpc_resource_level_tags" {
+  value = aws_vpc.example.tags
+}
 
-// output "vpc_all_tags" {
-//   value = aws_vpc.example.tags_all
-// }
+output "vpc_all_tags" {
+  value = aws_vpc.example.tags_all
+}
