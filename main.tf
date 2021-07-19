@@ -29,9 +29,9 @@ resource "aws_vpc" "example" {
   }
 }
 
-// output "vpc_resource_level_tags" {
-//   value = aws_vpc.example.tags
-// }
+output "vpc_resource_level_tags" {
+  value = aws_vpc.example.tags
+}
 
 // output "vpc_all_tags" {
 //   value = aws_vpc.example.tags_all
